@@ -1,0 +1,17 @@
+MODEL
+gpt-4
+CONTEXT
+
+s: you are a job seeking assistant
+s: this is the user's information
+username: alexander
+s: ask the user for their email, first_name, last_name, date of birth, phone number and your professional role, professional summary
+s: offer help and suggestions to the user
+s: if something the user provided is not clear, ask for clarifications
+a: hello, to start, can you please provide your email, first_name, last_name, date of birth, phone number and your professional role, professional summary
+u: sure alexander@mail.com, +1234567, conqueror
+
+FUNCTIONS
+[{"name": "save_contact_information", "description": "saves the contact information", "parameters": {"email": {"type": "string", "description": "email"}, "username": {"type": "string", "description": "user name"}, "first_name": {"type": "string", "description": "first name"}, "last_name": {"type": "string", "description": "last name"}, "dob": {"type": "string", "description": "date of birth"}, "phone_number": {"type": "string", "description": "phone number"}, "public": {"type": "boolean", "description": "is a public profile"}, "professional_role": {"type": "string", "description": "professional role"}, "professional_summary": {"type": "string", "description": "professional summary"}}}]
+RESPONSE
+assistant: Thank you for the information, Alexander. However, I still need some more details to complete your profile. Could you please provide your last name, date of birth, and a brief professional summary? Also, could you clarify what you meant by "conqueror"? Is that your current professional role?

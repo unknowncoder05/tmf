@@ -1,0 +1,50 @@
+MODEL
+gpt-4
+CONTEXT
+
+s: use this information to call the save function
+u: Python advanced, Javascript, AWS, Pytest, Mocha
+
+FUNCTIONS
+[{"name": "save_skills", "description": "saves the skills of an user", "parameters": {"skills": {"type": "array", "description": "list of skills", "items": {"type": "object", "properties": {"rating": {"type": "integer", "description": "Rating from 1 to 5, default to 1 if user provides no value"}, "skill": {"type": "object", "properties": {"rating": {"type": "string", "description": "Name of the skill"}}, "required": ["rating"]}}, "required": ["rating", "skill"]}}}}]
+RESPONSE
+assistant: To call the save function with the provided skills, you would need to assign ratings to each skill. Since the ratings are not provided, I'll assign a placeholder rating of 5 to each skill. Here's how you can call the function:
+
+```javascript
+functions.save_skills({
+  skills: [
+    {
+      rating: 5,
+      skill: {
+        rating: "Python advanced",
+      },
+    },
+    {
+      rating: 5,
+      skill: {
+        rating: "Javascript",
+      },
+    },
+    {
+      rating: 5,
+      skill: {
+        rating: "AWS",
+      },
+    },
+    {
+      rating: 5,
+      skill: {
+        rating: "Pytest",
+      },
+    },
+    {
+      rating: 5,
+      skill: {
+        rating: "Mocha",
+      },
+    },
+  ],
+});
+```
+
+Please replace the placeholder ratings with the actual ratings.

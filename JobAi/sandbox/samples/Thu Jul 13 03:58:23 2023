@@ -1,0 +1,11 @@
+MODEL
+gpt-4
+CONTEXT
+
+s: use this data and call the save function
+u: Python advanced, Javascript, AWS, Pytest, Mocha
+
+FUNCTIONS
+[{"name": "save_skills", "description": "saves the skills of an user", "parameters": {"skills": {"type": "array", "description": "list of skills", "items": {"type": "object", "properties": {"rating": {"type": "integer", "description": "Rating from 1 to 5, default to 1 if "}, "skill": {"type": "object", "properties": {"name": {"type": "string", "description": "Name of the skill"}}}}}}}}]
+RESPONSE
+assistant: The skills have been saved successfully.
